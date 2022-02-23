@@ -8,8 +8,8 @@ metadata:
     argocd.argoproj.io/sync-wave: '15'
 spec:
   tolerations:
-  - key: node.ocs.openshift.io/storage
-    value: true
+  - key: 'node.ocs.openshift.io/storage'
+    value: 'true'
     effect: NoSchedule
   nodeSelector:
     nodeSelectorTerms:
