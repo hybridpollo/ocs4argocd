@@ -11,4 +11,4 @@ resources:
   - resources/argocd-rbac-cm.yaml
   - resources/argocd-cm-customizations.yaml
   - resources/ocs-argocd-project-create.yaml
-#  - resources/ocs-application-infrastructure-deploy.yaml
+  - resources/ocs-application-infrastructure-deploy.yaml

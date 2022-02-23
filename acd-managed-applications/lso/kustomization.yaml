@@ -8,5 +8,5 @@ resources:
   - resources/lso-namespace.yaml
   - resources/lso-operator-group.yaml
   - resources/lso-subscription.yaml
-  - resources/lso-auto-discovery.yaml
-  - resources/lso-ocs-volumeset.yaml
+#  - resources/lso-auto-discovery.yaml
+#  - resources/lso-ocs-volumeset.yaml
