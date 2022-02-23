@@ -5,6 +5,7 @@ commonLabels:
   app.kubernetes.io/part-of: dev-ocs-infra
 
 resources:
+  - resources/ocs-namespace.yaml
   - resources/ocs-operator-group.yaml
   - resources/ocs-subscription.yaml
 #  - resources/odf-subscription.yaml

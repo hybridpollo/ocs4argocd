@@ -5,6 +5,7 @@ commonLabels:
   app.kubernetes.io/part-of: dev-ocs-infra
 
 resources:
+  - resources/lso-namespace.yaml
   - resources/lso-operator-group.yaml
   - resources/lso-subscription.yaml
   - resources/lso-auto-discovery.yaml

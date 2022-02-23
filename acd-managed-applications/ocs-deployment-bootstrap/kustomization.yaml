@@ -5,7 +5,6 @@ commonLabels:
   app.kubernetes.io/part-of: dev-ocs-infra
 
 resources:
-  - resources/namespaces-application.yaml
   - resources/lso-application.yaml
-#  - resources/ocso-application.yaml
+  - resources/ocso-application.yaml
 #  - resources/storagecluster-application.yaml
