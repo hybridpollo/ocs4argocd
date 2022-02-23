@@ -1,0 +1,60 @@
+---
+apiVersion: ocs.openshift.io/v1
+kind: StorageCluster
+metadata:
+  name: ocs-storagecluster
+  namespace: openshift-storage
+  annotations:
+    argocd.argoproj.io/sync-wave: '21'
+spec:
+  manageNodes: false
+  managedResources:
+    cephBlockPools:
+      reconcileStrategy: manage
+    cephFilesystems:
+      reconcileStrategy: manage
+    cephObjectStoreUsers:
+      reconcileStrategy: manage
+    cephObjectStores:
+      reconcileStrategy: manage
+  multiCloudGateway:
+    reconcileStrategy: manage
+  resources:
+    mds:
+      limits:
+        cpu: 3
+        memory: 8Gi
+      requests:
+        cpu: 1
+        memory: 8Gi
+    noobaa-core:
+      limits:
+        cpu: 2
+        memory: 8Gi
+      requests:
+        cpu: 1
+        memory: 8Gi
+    noobaa-db:
+      limits:
+        cpu: 2
+        memory: 8Gi
+      requests:
+        cpu: 1
+        memory: 8Gi
+  monDataDirHostPath: /var/lib/rook
+  storageDeviceSets:
+    - count: 1
+      dataPVCTemplate:
+        spec:
+          accessModes:
+           - ReadWriteOnce
+          resources:
+            requests:
+              storage: 256Gi
+          storageClassName: localblock
+          volumeMode: Block
+      name: ocs-deviceset
+      placement: {}
+      portable: false
+      replica: 3
+      resources: {}

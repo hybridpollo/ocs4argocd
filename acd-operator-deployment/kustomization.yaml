@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argocd
+
+resources:
+  - resources/namespace-argocd.yaml
+  - resources/operatorgroup-argocd.yaml
+  - resources/subscription-argocd.yaml
+  - resources/cluster-role-binding-argocd.yaml
+  - resources/argocd-cluster.yaml
+  - resources/argocd-rbac-cm.yaml
+  - resources/argocd-cm-customizations.yaml
+  - resources/ocs-argocd-project-create.yaml
+  - resources/ocs-application-infrastructure-deploy.yaml

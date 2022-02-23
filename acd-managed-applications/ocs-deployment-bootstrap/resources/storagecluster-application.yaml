@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ocs-storagecluster
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: '20'
+spec:
+  destination:
+    namespace: openshift-storage
+    server: https://kubernetes.default.svc
+  project: dev-ocs-infra
+  source:
+    path: acd-managed-applications/storagecluster
+    repoURL: https://github.com/hybridpollo/ocs4argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

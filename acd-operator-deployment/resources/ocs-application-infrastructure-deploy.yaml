@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-ocsv48-cluster
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: "https://kubernetes.default.svc"
+  project: dev-ocs-infra
+  source:
+    path: acd-managed-applications/ocs-deployment-bootstrap
+    repoURL: "https://github.com/hybridpollo/ocs4argocd"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

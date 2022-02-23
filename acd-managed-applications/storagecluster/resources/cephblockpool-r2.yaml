@@ -1,0 +1,18 @@
+---
+apiVersion: ceph.rook.io/v1
+kind: CephBlockPool
+metadata:
+  name: ocs-storagecluster-cephblockpool-r2
+  namespace: openshift-storage
+  annotations:
+    argocd.argoproj.io/sync-wave: '22'
+spec:
+  compressionMode: none
+  deviceClass: hdd
+  failureDomain: rack
+  mirroring: {}
+  parameters:
+    compression_mode: none
+  quotas: {}
+  replicated:
+    size: 2

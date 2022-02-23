@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstrap-namespace
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: '-25'
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: dev-ocs-infra
+  source:
+    path: acd-managed-applications/namespaces
+    repoURL: https://github.com/hybridpollo/ocs4argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
