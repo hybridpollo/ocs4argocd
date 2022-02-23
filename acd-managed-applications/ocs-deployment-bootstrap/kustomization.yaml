@@ -8,4 +8,4 @@ resources:
   - resources/lso-application.yaml
   - resources/ocso-application.yaml
   - resources/local-volumes-application.yaml
-#  - resources/storagecluster-application.yaml
+  - resources/storagecluster-application.yaml
