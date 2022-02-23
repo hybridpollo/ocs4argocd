@@ -5,7 +5,7 @@ metadata:
   name: auto-discover-devices
   namespace: openshift-local-storage
   annotations:
-    argocd.argoproj.io/sync-wave: '15'
+    argocd.argoproj.io/sync-wave: '1'
 spec:
   tolerations:
   - key: 'node.ocs.openshift.io/storage'

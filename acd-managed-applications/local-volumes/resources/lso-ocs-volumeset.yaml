@@ -5,7 +5,7 @@ metadata:
   name: local-block
   namespace: openshift-local-storage
   annotations:
-    argocd.argoproj.io/sync-wave: '15'
+    argocd.argoproj.io/sync-wave: '2'
 spec:
   tolerations:
   - key: 'node.ocs.openshift.io/storage'
