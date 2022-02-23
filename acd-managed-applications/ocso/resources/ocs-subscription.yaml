@@ -9,6 +9,6 @@ metadata:
 spec:
   name: ocs-operator
   channel: 'stable-4.8'
-  installPlanApproval: Manual
+  installPlanApproval: Automatic
   source: redhat-operators
   sourceNamespace: openshift-marketplace

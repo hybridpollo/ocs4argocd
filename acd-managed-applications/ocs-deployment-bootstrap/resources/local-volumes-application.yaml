@@ -2,17 +2,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bootstrap-namespace
+  name: local-volume-configuration
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: '-25'
+    argocd.argoproj.io/sync-wave: '10'
 spec:
   destination:
-    namespace: argocd
+    namespace: openshift-local-storage
     server: https://kubernetes.default.svc
   project: dev-ocs-infra
   source:
-    path: acd-managed-applications/namespaces
+    path: acd-managed-applications/local-volumes
     repoURL: https://github.com/hybridpollo/ocs4argocd
   syncPolicy:
     automated:
