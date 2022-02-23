@@ -7,7 +7,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '3'
 spec:
-  channel: 4.8
+  channel: '4.8'
   installPlanApproval: Automatic
   name: local-storage-operator
   source: redhat-operators  
