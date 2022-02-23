@@ -5,7 +5,7 @@ metadata:
   name: ocs-subscription
   namespace: openshift-storage
   annotations:
-    argocd.argoproj.io/sync-wave: '12'
+    argocd.argoproj.io/sync-wave: '-13'
 spec:
   name: ocs-operator
   channel: 'stable-4.8'
